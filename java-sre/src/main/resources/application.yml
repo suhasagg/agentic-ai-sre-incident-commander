@@ -1,0 +1,17 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: sre-mcp-action-plane
+  ai:
+    mcp:
+      server:
+        name: sre-action-plane
+        version: 1.0.0
+        protocol: STREAMABLE
+        type: ASYNC
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus

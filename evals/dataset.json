@@ -1,0 +1,24 @@
+[
+  {
+    "id": "latency",
+    "service": "checkout",
+    "severity": "SEV2",
+    "summary": "p95 latency above 2s and 5xx rising",
+    "expected": [
+      "Evidence",
+      "Hypotheses",
+      "Recommended Action",
+      "Verification"
+    ]
+  },
+  {
+    "id": "safe",
+    "service": "payments",
+    "severity": "SEV3",
+    "summary": "minor latency increase",
+    "expected": [
+      "Evidence",
+      "Recommended Action"
+    ]
+  }
+]
