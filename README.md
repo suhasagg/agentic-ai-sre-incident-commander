@@ -396,7 +396,7 @@ Recommended next production steps:
 11. Observability without leaking confidential prompts.
 12. Threat modeling for prompt injection and poisoned tool/RAG content.
 
-## 15. Resume / Portfolio Description
+## 15. Portfolio Description
 
 > **Agentic AI SRE / Autonomous Incident Commander** — Designed and implemented a Python/Java enterprise AI reference platform with explicit control-plane/action-plane boundaries, production-oriented reliability, security/governance, observability, testing and AI evaluation patterns. 
 
