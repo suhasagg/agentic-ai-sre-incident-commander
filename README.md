@@ -2489,18 +2489,3 @@ A credible autonomous incident commander is built around these rules:
 The defining principle is simple:
 
 > **The AI is an incident-response reasoning component. It is not the production control authority.**
-
-That distinction is what turns an impressive SRE agent demo into an architecture that can be defended in a Principal or Distinguished Engineer review.
-
-
----
-
-# Current Framework Notes
-
-This architecture guide was refreshed against current official framework documentation.
-
-- The OpenAI Agents SDK provides agents, tools/handoffs, guardrails, sessions/HITL and built-in tracing. Its tracing model can record model generations, tool calls, handoffs, guardrails and custom events, which maps well to the incident span hierarchy in this design.
-- Agent-level input/output guardrails protect the workflow boundary, while tool guardrails protect individual custom/local-MCP tool invocations. For an SRE system, production mutations therefore require tool/action-plane controls rather than relying only on a top-level prompt or output check.
-- The Agents SDK supports local MCP integrations and recommends trusting MCP servers, using least-privilege credentials and requiring approval for sensitive operations.
-- Spring AI 2.0.1 supports Streamable HTTP and stateless MCP server deployment patterns. Its HTTP MCP starter does not automatically provide authentication/authorization; production deployments need an explicit security boundary in front of the MCP endpoint.
-- Framework versions, API signatures and model identifiers evolve. Pin and verify concrete versions before production deployment.
